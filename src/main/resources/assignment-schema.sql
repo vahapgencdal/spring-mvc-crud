@@ -1,4 +1,5 @@
-CREATE SCHEMA  IF NOT EXISTS `assignment`;
+CREATE SCHEMA  IF NOT EXISTS `assignment_test`;
+USE `assignment_test`;
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -29,9 +30,7 @@ CREATE TABLE `user_sector` (
   PRIMARY KEY (`user_id`,`sector_id`)
 );
 
---sector--
 alter table sector add CONSTRAINT `FKn6jfoe213mlnafoaiaolvh5c8` FOREIGN KEY (`parent_id`) REFERENCES `sector` (`id`);
 
---user_sector--
 alter table user_sector add CONSTRAINT `FKajjtoc3nwpa9dhcy720g3bgxs` FOREIGN KEY (`sector_id`) REFERENCES `sector` (`id`);
 alter table user_sector add CONSTRAINT `FKot4oeus7wpkmfpmi23ugbect4` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);

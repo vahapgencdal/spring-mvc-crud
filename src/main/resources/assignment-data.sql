@@ -1,8 +1,7 @@
---User Data--
 INSERT INTO user(id, name, agree_to_terms, is_active, created_at) VALUES
 ('1', 'Vahap', 1, 1, '2021-03-27 10:57:53'),
 ('2', 'Efe', 1, 1, '2021-03-27 10:57:53');
---Sector Data--
+
 INSERT INTO sector(id, parent_id, name, is_active, created_at) VALUES
 ('1', null, 'Manufacturing', 1, '2020-07-27 10:57:53'),
 ('2', '1', 'Construction materials', 1, '2020-07-27 10:57:53'),

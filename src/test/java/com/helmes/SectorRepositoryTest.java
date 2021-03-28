@@ -32,14 +32,14 @@ class SectorRepositoryTest {
 	}
 
 	@Test
-	public void findByIdInTest(){
+	void findByIdInTest(){
 		List<Sector> result = sectorRepository.findByIdIn(Arrays.asList(1L));
 		Assertions.assertEquals(1, result.size());
 		Assertions.assertEquals("test1", result.get(0).getName());
 	}
 
 	@Test
-	public void findByParentIsNull(){
+	void findByParentIsNull(){
 		List<Sector> result = sectorRepository.findByParentIsNull();
 		Assertions.assertEquals(2, result.size());
 		Assertions.assertEquals("test1", result.get(0).getName());

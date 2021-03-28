@@ -12,6 +12,8 @@ import java.util.List;
  */
 public class Util {
 
+    private Util(){}
+
     public static final String SPACE = "&nbsp;&nbsp;&nbsp;&nbsp;";
 
 

@@ -12,7 +12,7 @@ class UtilTest {
 
 
 	@Test
-	public void leftPadTest(){
+	void leftPadTest(){
 		String str = Util.leftPad("test", 1);
 		Assertions.assertEquals(Util.SPACE + "test",str);
 	}

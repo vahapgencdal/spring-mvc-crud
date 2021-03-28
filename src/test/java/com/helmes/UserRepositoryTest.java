@@ -57,7 +57,7 @@ class UserRepositoryTest {
 	}
 
 	@Test
-	public void findAllTest(){
+	void findAllTest(){
 		List<User> result = userRepository.findAll();
 		Assertions.assertEquals(2, result.size());
 		Assertions.assertEquals("test1", result.get(0).getName());

@@ -24,6 +24,7 @@ import javax.validation.Valid;
 public class UsersController {
 
     private static final String ADD_USER = "add-user";
+    private static final String USER_FORM_DTO = "userFormDto";
     private static final String REDIRECT_SLASH = "redirect:/";
 
     @Autowired
@@ -45,7 +46,7 @@ public class UsersController {
         userFormDto.setSectors(sectorService.getMappedSectorList());
         userFormDto.setAgreeToTerm(Boolean.FALSE);
 
-        model.addAttribute("userFormDto",userFormDto);
+        model.addAttribute(USER_FORM_DTO,userFormDto);
 
         return ADD_USER;
 
@@ -66,14 +67,14 @@ public class UsersController {
     @GetMapping("/edit/{id}")
     public String editUser(@PathVariable("id") long id, Model model) {
 
-        model.addAttribute("userFormDto", userService.getUserDto(id));
+        model.addAttribute(USER_FORM_DTO, userService.getUserDto(id));
         return ADD_USER;
     }
 
     @GetMapping("/view/{id}")
     public String viewUser(@PathVariable("id") long id, Model model) {
 
-        model.addAttribute("userFormDto", userService.getUserDto(id));
+        model.addAttribute(USER_FORM_DTO, userService.getUserDto(id));
         model.addAttribute("action","view");
         return ADD_USER;
     }
